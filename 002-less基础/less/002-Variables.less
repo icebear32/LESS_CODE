@@ -1,0 +1,30 @@
+@color: pink;
+// 属性名或选择器名都是用花括号{}包住变量名
+@m: margin;
+@selector: #wrap;
+
+* {
+    @{m}: 0;
+    padding: 0;
+}
+
+// #wrap {
+@{selector} {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+
+    .inner {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: @color;
+        height: 100px;
+        width: 100px;
+    }
+}
