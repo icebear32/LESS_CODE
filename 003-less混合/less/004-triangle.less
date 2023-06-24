@@ -1,0 +1,32 @@
+// 多处重复代码，以下设置就是当外部调用 triangle 时，
+// 会自动引用该处的代码
+.triangle(@_) {
+    width: 0px;
+    height: 0px;
+    overflow: hidden;
+}
+
+// 匹配模式，T R B L 作为标识
+.triangle(T, @w, @c) {
+    border-width: @w;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent @c transparent;
+}
+
+.triangle(R, @w, @c) {
+    border-width: @w;
+    border-style: dashed dashed dashed solid;
+    border-color: transparent transparent transparent @c;
+}
+
+.triangle(B, @w, @c) {
+    border-width: @w;
+    border-style: solid dashed dashed dashed;
+    border-color:  @c transparent transparent transparent;
+}
+
+.triangle(L, @w, @c) {
+    border-width: @w;
+    border-style: dashed solid dashed dashed;
+    border-color: transparent @c transparent transparent;
+}

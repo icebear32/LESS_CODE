@@ -1,0 +1,33 @@
+// 混合的命名参数
+.juzhong(@w: 10px, @h: 10PX, @c: red) {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: @c;
+    height: @h;
+    width: @w;
+}
+
+#wrap {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+
+    .inner {
+        .juzhong(100px, 100px, pink);
+    }
+
+    .inner2 {
+        // 此刻指向传递一个颜色参数
+        // less只传递一个参数被当作混合的第一个参数导致代码出现错误
+        // .juzhong(black);
+
+        // 解决：混合的命名参数，指定参数使用的样式传递
+        .juzhong(@c:black)
+    }
+}

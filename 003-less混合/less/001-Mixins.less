@@ -1,0 +1,63 @@
+// #wrap {
+//     position: relative;
+//     width: 300px;
+//     height: 400px;
+//     border: 1px solid;
+//     margin: 0 auto;
+
+//     .inner {
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//         margin: auto;
+//         background: pink;
+//         height: 100px;
+//         width: 100px;
+//     }
+
+//     // 大量代码重复
+//     .inner2 {
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         top: 0;
+//         bottom: 0;
+//         margin: auto;
+//         background: pink;
+//         height: 100px;
+//         width: 100px;
+//     }
+// }
+
+// 定义混合
+// .juzhong {
+.juzhong() {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    background: pink;
+    height: 100px;
+    width: 100px;
+}
+
+#wrap {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    border: 1px solid;
+    margin: 0 auto;
+
+    .inner {
+        // 调用混合相当于把混合的内容复制到该处
+        .juzhong;       
+    }
+
+    .inner2 {
+        .juzhong;
+    }
+}
