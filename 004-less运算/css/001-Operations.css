@@ -1,0 +1,21 @@
+.div1 {
+  width: 6cm;
+  height: -1.5cm;
+}
+.div2 {
+  width: -106.38582677px;
+}
+.div3 {
+  border-top-right-radius: 5%;
+  border-top-left-radius: 10%;
+  border-bottom-left-radius: 15%;
+}
+.div4 {
+  width: 6cm;
+}
+.div5 {
+  background-color: #223355;
+}
+.div6 {
+  width: calc(50% + (25vh - 20px));
+}
